@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.0.150/spring_boot?characterEncoding=utf-8&useSSL=false
+#  jpa:
+#    show-sql: true
+  redis:
+    host: 192.168.0.161
+    port: 6379
+#    password:
+#  jackson:
+#    default-property-inclusion: non_null
+server:
+  context-path: /sell
+
+wechat:
+  mpAppId: wxb406354d0c3fb7b8
+  mpAppSecret: c5520090b3a5571b90749befbd1a7cd2
+  openAppId: wxb406354d0c3fb7b8
+  openAppSecret: c5520090b3a5571b90749befbd1a7cd2
+  mchId: 1409146202
+  mchKey: c976503d34ca432c601361f969fd8d85
+  keyPath: /var/weixin_cert/h5.p12
+  notifyUrl: http://shidun.natapp1.cc/sell/pay/notify
+  templateId:
+    orderStatus: UekbhNdvfwDSLlW1nGqT-6jD7XUruCbPYfijcdhull8
+
+projectUrl:
+  wxchatMpAuthorize: http://shidun.natapp1.cc
+  wxchatOpenAuthorize: http://shidun.natapp1.cc
+  sell: http://127.0.0.1:8080
+
+#  打印sql
+logging:
+  level:
+  com.imooc.dataobject.mapper: trace
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
